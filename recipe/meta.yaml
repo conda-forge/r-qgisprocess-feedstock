@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.2.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qgisprocess_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qgisprocess/qgisprocess_{{ version }}.tar.gz
-  sha256: 593a4a52131892306aabe9b298d33057c59d681fa0301fba8d0e136dbe55ae1c
+  sha256: 0b3417a766e628e08b93cbb70738fc63f63f667f7c20b275d421adb87f8b6a38
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -100,11 +100,8 @@ about:
   home: https://r-spatial.github.io/qgisprocess/
   dev_url: https://github.com/r-spatial/qgisprocess
   license: GPL-3.0-or-later
-  summary: Provides seamless access to the 'QGIS' (<https://qgis.org/en/site/>) processing toolbox
-    using the standalone 'qgis_process' command-line utility.  Both native and third-party
-    (plugin) processing providers are supported.  Beside referring data sources from
-    file, also common objects from 'sf', 'terra' and 'stars' are supported. The native
-    processing algorithms are documented by QGIS.org (2023) <https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/>.
+  summary: Provides seamless access to the 'QGIS' (<https://qgis.org/en/site/>) processing toolbox using the standalone 'qgis_process' command-line utility.  Both native and third-party (plugin) processing providers are supported.  Beside referring data sources from file, also common objects from 'sf', 'terra' and 'stars'
+    are supported. The native processing algorithms are documented by QGIS.org (2023) <https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/>.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
