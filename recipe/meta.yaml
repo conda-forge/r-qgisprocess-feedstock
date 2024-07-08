@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/qgisprocess_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/qgisprocess/qgisprocess_{{ version }}.tar.gz
-  sha256: 3ec1c33c444b4e6e2333736a216c5843dcb8e990f3337d95641b8943a149e650
+  sha256: 0b86faff81e83f940b3c600355794a3e54f316d01eb4d033ca9c260b9d775037
 
 build:
   merge_build_host: true  # [win]
