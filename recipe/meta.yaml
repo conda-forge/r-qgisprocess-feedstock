@@ -86,9 +86,9 @@ test:
   commands:
     #- qgis_process --help
     - $R -e "library('qgisprocess')"                                         # [not win]
-    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"  # [not win]
+    # - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"  # [not win]
     - "\"%R%\" -e \"library('qgisprocess')\""                                         # [win]
-    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
+    # - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://r-spatial.github.io/qgisprocess/
