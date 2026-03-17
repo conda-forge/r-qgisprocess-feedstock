@@ -1,5 +1,5 @@
-cdt_name:
-- conda
+alsa_lib:
+- '1.2'
 channel_sources:
 - conda-forge
 channel_targets:
