@@ -12,7 +12,7 @@ source:
   sha256: c98845396e3c6c2d62e0db8d064c7daaf77a16a9f53367be7a788ac011c57950
 
 build:
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -55,32 +55,24 @@ test:
     - r-stars
     - r-terra
     # Following CDTs are from `qgis` feedstock test section
-    - {{ cdt('xorg-x11-proto-devel') }}  # [linux]
-    - {{ cdt('libx11-devel') }}          # [linux]
-    - {{ cdt('libxext-devel') }}         # [linux]
-    - {{ cdt('libxrender-devel') }}      # [linux]
-    - {{ cdt('mesa-libgl-devel') }}      # [linux]
-    - {{ cdt('mesa-libegl-devel') }}     # [linux]
-    - {{ cdt('mesa-dri-drivers') }}      # [linux]
-    - {{ cdt('libxau-devel') }}          # [linux]
-    - {{ cdt('alsa-lib-devel') }}        # [linux]
-    - {{ cdt('gtk2-devel') }}            # [linux]
-    - {{ cdt('gtkmm24-devel') }}         # [linux]
-    - {{ cdt('libdrm-devel') }}          # [linux]
-    - {{ cdt('libxcomposite-devel') }}   # [linux]
-    - {{ cdt('libxcursor-devel') }}      # [linux]
-    - {{ cdt('libxi-devel') }}           # [linux]
-    - {{ cdt('libxrandr-devel') }}       # [linux]
-    - {{ cdt('pciutils-devel') }}        # [linux]
-    - {{ cdt('libxscrnsaver-devel') }}   # [linux]
-    - {{ cdt('libxtst-devel') }}         # [linux]
-    - {{ cdt('libselinux-devel') }}      # [linux]
-    - {{ cdt('libxdamage') }}            # [linux]
-    - {{ cdt('libxdamage-devel') }}      # [linux]
-    - {{ cdt('libxfixes') }}             # [linux]
-    - {{ cdt('libxfixes-devel') }}       # [linux]
-    - {{ cdt('libxxf86vm') }}            # [linux]
-    - {{ cdt('libxcb') }}                # [linux]
+    - xorg-xorgproto                     # [linux]
+    - xorg-libx11                        # [linux]
+    - xorg-libxext                       # [linux]
+    - xorg-libxrender                    # [linux]
+    - libgl-devel                        # [linux]
+    - libegl-devel                       # [linux]
+    - xorg-libxau                        # [linux]
+    - alsa-lib                           # [linux]
+    - gtk2                               # [linux]
+    - libdrm                             # [linux]
+    - xorg-libxcomposite                 # [linux]
+    - xorg-libxcursor                    # [linux]
+    - xorg-libxi                         # [linux]
+    - xorg-libxrandr                      # [linux]
+    - xorg-libxscrnsaver                 # [linux]
+    - xorg-libxtst                       # [linux]
+    - xorg-libxdamage                    # [linux]
+    - xorg-libxfixes                     # [linux]
   source_files:
     - tests/
   commands:
@@ -94,8 +86,8 @@ about:
   home: https://r-spatial.github.io/qgisprocess/
   dev_url: https://github.com/r-spatial/qgisprocess
   license: GPL-3.0-or-later
-  summary: Provides seamless access to the 'QGIS' (<https://qgis.org/en/site/>) processing toolbox using the standalone 'qgis_process' command-line utility.  Both native and third-party (plugin) processing providers are supported.  Beside referring data sources from file, also common objects from 'sf', 'terra' and 'stars'
-    are supported. The native processing algorithms are documented by QGIS.org (2023) <https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/>.
+  summary: Provides seamless access to the 'QGIS' (<https://qgis.org/en/site/>) processing toolbox using the standalone 'qgis_process' command-line utility.  Both native and third-party (plugin) processing providers are supported.  Beside referring data sources from file, also common objects from 'sf', 'terra' and 
+    'stars' are supported. The native processing algorithms are documented by QGIS.org (2023) <https://docs.qgis.org/latest/en/docs/user_manual/processing_algs/>.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
